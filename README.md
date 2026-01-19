@@ -20,3 +20,28 @@ This project was implemented as a learning exercise to understand core Java back
 
 ![Workflow Diagram](docs/workflow.png)
 
+------------------------------------------------------------------------------------------DB---------------------------------------------------------------------------------------------------------------
+
+    ## Database Setup (MySQL)
+
+The application uses a MySQL database.  
+Below are the SQL commands required to create the database and tables:
+
+```sql
+CREATE DATABASE attendance_db;
+USE attendance_db;
+
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    roll_no VARCHAR(20)
+);
+
+CREATE TABLE attendance (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    date DATE,
+    status VARCHAR(10)
+);
+
+
